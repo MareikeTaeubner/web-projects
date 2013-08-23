@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="js/ProjectController.js"></script>
+</head>
+<body ng-controller="ProjectController">
+<div id="header"></div>
+<div id="content">
+    <div class="project" ng-repeat="projectItem in projects">
+        <div>{{ projectItem.name }}</div>
+        <a ng-repeat="typeItem in projectItem.types" href="projects/{{ projectItem.name }}/index-{{ typeItem }}.html">
+            <span>
+                <img src="img/{{ typeItem }}-logo.jpg"/>
+            </span>
+        </a>
+
+
+    </div>
+
+</div>
+</body>
+</html>

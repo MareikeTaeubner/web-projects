@@ -1,0 +1,39 @@
+body {
+    font-family: helvetica;
+}
+
+#header {
+    height: 100px;
+    width: 100%;
+
+    background-color: #ffe51a;
+}
+
+.project {
+    width: 150px;
+    min-height: 50px;
+
+    float: left;
+
+    background-color: green;
+    color: white;
+
+    margin: 20px;
+    padding:5px;
+    text-align: center;
+}
+
+ .project div {
+     font-weight: bold;
+     font-size: 1em;
+     text-shadow: 2px 1px black;
+ }
+
+.project span {
+       padding: 10px;
+    display: inline-block;
+}
+
+ span:hover {
+    background-color: orange;
+}
