@@ -1,0 +1,39 @@
+.wrapper {
+    width: 300px;
+
+    margin: 0 auto;
+    padding:10px;
+
+    border-radius: 4px;
+
+    background-color: #afafaf;
+
+}
+
+.list {
+    margin-top: 20px;
+}
+
+.listItem {
+    cursor: pointer;
+
+
+}
+
+.listItem:hover{
+    background-color: #eeeeee;
+}
+
+.done {
+    background-color: #8ab72d;
+
+    color: white;
+}
+
+.done:hover{
+    background-color: yellowgreen;
+}
+
+.checkmark {
+    float: right;
+}

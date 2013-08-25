@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="toDo">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="js/ngStorage.js"></script>
+    <script src="js/ToDoController.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body ng-controller="ToDoController">
+  <div class="wrapper">
+      <form class="input-group">
+          <input ng-model="toDoInput" class="form-control"/>
+         <span class="input-group-btn"> <button ng-click="add()" class="btn btn-danger">Add!</button>  </span>
+      </form>
+      <div class="list-group list">
+          <div ng-repeat="toDoItem in toDoList" ng-click="toggleDone(toDoItem)" ng-class="{done:toDoItem.done}" class="list-group-item listItem">
+              {{ toDoItem.text }}
+              <span class="glyphicon glyphicon-ok checkmark" ng-show="toDoItem.done"></span>
+          </div>
+      </div>
+      <button ng-click="archive()" class="btn btn-danger">Archive!</button>
+  </div>
+</body>
+</html>

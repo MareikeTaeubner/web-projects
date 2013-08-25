@@ -1,7 +1,7 @@
 function ProjectController($scope) {
     $scope.projects = [
         new Project("calculator", ["angularjs"]),
-        new Project("toDoList", ["jquery", "angularjs"])
+        new Project("toDoList", ["angularjs"])
     ];
 }
 
