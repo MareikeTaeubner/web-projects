@@ -18,7 +18,7 @@ function CalculatorController($scope) {
     };
 
     $scope.solve = function() {
-        $scope.displayValue = eval($scope.displayValue);
+        $scope.displayValue = "" + eval($scope.displayValue);
     };
 
     $scope.clean = function() {
