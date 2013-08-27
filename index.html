@@ -9,16 +9,10 @@
 <body ng-controller="ProjectController">
 <div id="header"></div>
 <div id="content">
-    <div class="project" ng-repeat="projectItem in projects">
-        <div>{{ projectItem.name }}</div>
-        <a ng-repeat="typeItem in projectItem.types" href="projects/{{ projectItem.name }}/index-{{ typeItem }}.html">
-            <span>
-                <img src="img/{{ typeItem }}-logo.jpg"/>
-            </span>
-        </a>
+    <a class="project" ng-repeat="projectItem in projects" href="projects/{{ projectItem.name }}/index.html">
+        <span>{{ projectItem.name }}</span>
+    </a>
 
-
-    </div>
 
 </div>
 </body>

@@ -1,11 +1,11 @@
 function ProjectController($scope) {
     $scope.projects = [
-        new Project("calculator", ["angularjs"]),
-        new Project("toDoList", ["angularjs"])
+        new Project("calculator"),
+        new Project("toDoList")
     ];
 }
 
-function Project(name, types) {
+function Project(name) {
     this.name = name;
-    this.types = types;
+
 }

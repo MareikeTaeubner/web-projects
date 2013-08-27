@@ -21,19 +21,25 @@ body {
     margin: 20px;
     padding:5px;
     text-align: center;
+
+    text-decoration: none;
 }
 
- .project div {
+ .project span {
      font-weight: bold;
      font-size: 1em;
      text-shadow: 2px 1px black;
+
+     line-height: 50px;
+
+
+
+
+
  }
 
-.project span {
-       padding: 10px;
-    display: inline-block;
-}
 
- span:hover {
+
+ .project:hover {
     background-color: orange;
 }
