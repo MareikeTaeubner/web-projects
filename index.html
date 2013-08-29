@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="rhayene-projects">
 <head>
     <title></title>
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <!-- ng-modules -->
+    <script src="js/ngStorage.js"></script>
     <script src="js/ProjectController.js"></script>
 </head>
 <body ng-controller="ProjectController">
 <div id="header"></div>
 <div id="content">
-    <a class="project" ng-repeat="projectItem in projects" href="projects/{{ projectItem.name }}/index.html">
+    <a class="project" ng-repeat="projectItem in projects" href="#/projects/{{ projectItem.name }}"
+       ng-class="{selected: projectItem == currentProject}">
         <span>{{ projectItem.name }}</span>
     </a>
-
-
 </div>
+<div ng-include="currentProject.url"></div>
 </body>
 </html>

@@ -9,6 +9,10 @@ body {
     background-color: #ffe51a;
 }
 
+#content {
+    height: 200px;
+}
+
 .project {
     width: 150px;
     min-height: 50px;
@@ -25,21 +29,16 @@ body {
     text-decoration: none;
 }
 
+.project:hover, .project.selected {
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+}
+
  .project span {
      font-weight: bold;
      font-size: 1em;
      text-shadow: 2px 1px black;
 
      line-height: 50px;
-
-
-
-
-
  }
-
-
-
- .project:hover {
-    background-color: orange;
-}

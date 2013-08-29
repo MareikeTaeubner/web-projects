@@ -1,0 +1,19 @@
+<div>
+    <script src="projects/toDoList/js/ToDoController.js"></script>
+    <link href="projects/toDoList/css/style.css" rel="stylesheet"/>
+
+    <div class="wrapper" ng-controller="ToDoController">
+        <form class="input-group">
+            <input ng-model="toDoInput" class="form-control" placeholder="Type here!"/>
+            <span class="input-group-btn"> <button ng-click="add()" class="btn btn-warning">Add!</button>  </span>
+        </form>
+        <div class="list-group list">
+            <div ng-repeat="toDoItem in toDoList" ng-click="toggleDone(toDoItem)" ng-class="{done:toDoItem.done}"
+                 class="list-group-item listItem">
+                {{ toDoItem.text }}
+                <span class="glyphicon glyphicon-ok checkmark" ng-show="toDoItem.done"></span>
+            </div>
+        </div>
+        <button ng-click="archive()" class="btn btn-warning">Archive!</button>
+    </div>
+</div>
