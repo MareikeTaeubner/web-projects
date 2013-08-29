@@ -1,5 +1,3 @@
-angular.module("toDo", ["ngStorage"]);
-
 function ToDoController($scope, $localStorage) {
 
 
