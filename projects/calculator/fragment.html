@@ -1,0 +1,22 @@
+<div>
+    <script src="projects/calculator/js/CalculatorController.js"></script>
+    <link href="projects/calculator/css/style.css" rel="stylesheet"/>
+
+    <div class="wrapper" ng-controller="CalculatorController">
+        <div class="display well">{{ displayValue }}</div>
+        <div class="buttons">
+            <div class="inputs">
+                <div class="myRow" ng-repeat="row in inputs">
+                    <div class="btn btn-default myButton" ng-repeat="cell in row" ng-click="add(cell)">{{ cell }}</div>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="btn btn-primary myButton" ng-click="deleteLast()">C</div>
+                <div class="btn btn-primary myButton" ng-click="clean()">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </div>
+                <div class="btn btn-primary myButton" ng-click="solve()">=</div>
+            </div>
+        </div>
+    </div>
+</div>
