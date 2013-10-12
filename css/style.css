@@ -1,12 +1,9 @@
-body {
-    font-family: helvetica;
+.header {
+    border-bottom: 1px solid lightgray;
 }
 
-#header {
-    height: 100px;
-    width: 100%;
-
-    background-color: #ffe51a;
+.header h3 {
+    padding-bottom: 19px;
 }
 
 #content {
@@ -19,26 +16,17 @@ body {
 
     float: left;
 
-    background-color: green;
-    color: white;
-
-    margin: 20px;
-    padding:5px;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 5px;
     text-align: center;
 
     text-decoration: none;
 }
 
-.project:hover, .project.selected {
-    text-decoration: none;
-    color: white;
-    background-color: orange;
+.project span {
+    font-weight: bold;
+    font-size: 1em;
+
+    line-height: 50px;
 }
-
- .project span {
-     font-weight: bold;
-     font-size: 1em;
-     text-shadow: 2px 1px black;
-
-     line-height: 50px;
- }

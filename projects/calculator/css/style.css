@@ -1,6 +1,8 @@
 .myButton {
     height: 45px;
     width: 45px;
+
+    line-height: 31px;
 }
 
 .myRow .myButton:last-child {
@@ -14,7 +16,7 @@
     width: 300px;
     height: 270px;
 
-    background-color: black;
+    background-color: #f5f5f5;
 
     border-radius: 4px;
 }
@@ -34,4 +36,5 @@
 
 .display {
     height: 50px;
+    background-color: #ffffff;
 }

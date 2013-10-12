@@ -12,13 +12,22 @@
     <script src="js/ProjectController.js"></script>
 </head>
 <body ng-controller="ProjectController">
-<div id="header"></div>
-<div id="content">
-    <a class="project" ng-repeat="projectItem in projects" href="#/projects/{{ projectItem.name }}"
-       ng-class="{selected: projectItem == currentProject}">
-        <span>{{ projectItem.name }}</span>
-    </a>
+<div class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li class="active">
+                <a href="https://github.com/Rhayene/web-projects" target="_blank">code</a>
+            </li>
+        </ul>
+        <h3 class="text-muted">Rhayene.org</h3>
+    </div>
+    <div id="content">
+        <a class="project btn" ng-repeat="projectItem in projects" href="#/projects/{{ projectItem.name }}"
+           ng-class="{'btn-primary':projectItem!= currentProject, 'btn-default': projectItem == currentProject}">
+            <span>{{ projectItem.name }}</span>
+        </a>
+    </div>
+    <div ng-include="currentProject.url"></div>
 </div>
-<div ng-include="currentProject.url"></div>
 </body>
 </html>

@@ -16,7 +16,8 @@ app.config(function ($routeProvider) {
 function ProjectController($scope, $route, $routeParams) {
     $scope.projects = {
         calculator: new Project("calculator"),
-        toDoList: new Project("toDoList")
+        toDoList: new Project("toDoList"),
+        mastermind: new Project("mastermind")
     };
 
     $scope.currentProject = null;
@@ -37,5 +38,4 @@ function ProjectController($scope, $route, $routeParams) {
 function Project(name) {
     this.name = name;
     this.url = "projects/" + name + "/fragment.html";
-
 }
